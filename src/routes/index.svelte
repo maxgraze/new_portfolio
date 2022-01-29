@@ -23,6 +23,12 @@
       },
     }
   }
+  //   <Head
+  //   title={`${siteName} · ${authorName}`}
+  //   {description}
+  //   image={openGraphDefaultImage.url}
+  // />
+  //  url={`${siteUrl}`} <- for Head
 </script>
 
 <script>
@@ -37,13 +43,6 @@
   } = $siteMetadataStore
   const { name: authorName } = $authorsStore
 </script>
-
-<Head
-  title={`${siteName} · ${authorName}`}
-  {description}
-  image={openGraphDefaultImage.url}
-  url={`${siteUrl}`}
-/>
 
 <h1 class="font-bold text-center mb-20 text-5xl">
   Welcome to my Portfolio

@@ -7,7 +7,7 @@
   import TwitterIcon from './twitter-icon.svelte'
   import YouTubeIcon from './you-tube-icon.svelte'
 
-  const { twitterUrl, youTubeUrl, facebookUrl } = $socialsStore
+  const { twitterUrl, linkedinUrl, instagramUrl } = $socialsStore
   const { name: AuthorName } = $authorsStore
 </script>
 
@@ -24,17 +24,16 @@
       <a href={twitterUrl}>
         <TwitterIcon />
       </a>
-      <a href={youTubeUrl}>
+      <a href={instagramUrl}>
         <YouTubeIcon />
       </a>
-      <a href={facebookUrl}>
+      <a href={linkedinUrl}>
         <FacebookIcon />
       </a>
     </div>
   </div>
   <div>
     <p>
-      Copyright &copy; {`${new Date().getFullYear()}`} - All right reserved
       {AuthorName}
     </p>
   </div>

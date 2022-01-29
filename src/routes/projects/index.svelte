@@ -34,9 +34,7 @@
   url={`${siteUrl}${$page.url.pathname}`}
 />
 
-<h1 class="font-bold mb-20 text-center text-5xl">
-  Recent Projects by Me
-</h1>
+<h1 class="font-bold mb-20 text-5xl">Extracurricular Projects</h1>
 
 <div
   class="grid gap-10 md:grid-cols-4 md:px-10 lg:grid-cols-6 lg:-mx-52"

@@ -34,10 +34,10 @@
   url={`${siteUrl}${$page.url.pathname}`}
 />
 
-<h1 class="text-4xl mb-10 font-extrabold">Blog posts</h1>
+<h1 class="text-4xl mb-10 font-extrabold">articles</h1>
 
 {#each posts as { title, slug, content, coverImage, tags }}
-  <div class="card text-center shadow-2xl mb-20">
+  <div class="card shadow-2xl mb-20">
     <figure class="">
       <img
         class=""

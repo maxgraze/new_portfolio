@@ -56,9 +56,6 @@ const POST_FRAGMENT = gql`
     coverImage {
       url
     }
-    authors {
-      name
-    }
   }
 `
 
@@ -84,8 +81,8 @@ export const socialsQuery = gql`
   query GetSocials {
     socials {
       twitterUrl
-      youTubeUrl
-      facebookUrl
+      instagramUrl
+      linkedinUrl
     }
   }
 `
