@@ -4,7 +4,8 @@
     // { href: '/', name: 'Home' },
     { href: '/about', name: 'about' },
     { href: '/projects', name: 'projects' },
-    { href: '/posts', name: 'posts' },
+    { href: '/articles', name: 'articles' },
+    // { href: '/newsletter', name: 'newsletter' },
   ]
 </script>
 
@@ -24,7 +25,7 @@
       <a class="btn btn-ghost btn-sm rounded-btn" href="/projects">
         Portfolio
       </a>
-      <a class="btn btn-ghost btn-sm rounded-btn" href="/posts">
+      <a class="btn btn-ghost btn-sm rounded-btn" href="/articles">
         Blog
       </a>
       <a class="btn btn-ghost btn-sm rounded-btn" href="/about">
@@ -43,5 +44,10 @@
         >{route.name}</a
       >
     {/each}
+    <a
+      href="https://buttondown.email/datathesenses"
+      class="transition duration-300 block py-1 px-4"
+      target="_blank">data the senses</a
+    >
   </nav>
 </div>

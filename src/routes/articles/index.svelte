@@ -2,23 +2,23 @@
   import { page } from '$app/stores'
   import Head from '$components/head.svelte'
   import { client } from '$lib/graphql-client'
-  import { postsQuery } from '$lib/graphql-queries'
+  import { articleQuery } from '$lib/graphql-queries'
   import { siteMetadataStore } from '$stores/site-metadata'
   import { marked } from 'marked'
 
   export const load = async () => {
-    const { posts } = await client.request(postsQuery)
+    const { articles } = await client.request(articleQuery)
 
     return {
       props: {
-        posts,
+        articles,
       },
     }
   }
 </script>
 
 <script>
-  export let posts
+  export let articles
 
   const {
     siteUrl,
@@ -28,15 +28,15 @@
 </script>
 
 <Head
-  title={`Blog posts! · ${siteName}`}
-  description={`A list of recent blog posts.`}
+  title={`articles! · ${siteName}`}
+  description={`A list of recent articles.`}
   image={openGraphDefaultImage.url}
   url={`${siteUrl}${$page.url.pathname}`}
 />
 
 <h1 class="text-4xl mb-10 font-extrabold">articles</h1>
 
-{#each posts as { title, slug, content, coverImage, tags }}
+{#each articles as { title, slug, postUrl, content, coverImage, tags }}
   <div class="card shadow-2xl mb-20">
     <figure class="">
       <img
@@ -48,15 +48,22 @@
     <div class="card-body prose">
       <h2 class="title">{title}</h2>
       {@html marked(content).slice(0, 150)}
+
+      <div class="justify-center card-actions">
+        <a
+          href={postUrl}
+          target="_blank"
+          class="btn btn-outline btn-primary">Read &rArr;</a
+        >
+        <!-- <a
+          href={`/articles/${slug}`}
+          class="btn btn-outline btn-primary">Read &rArr;</a
+        > -->
+      </div>
       <div class="flex justify-center mt-5 space-x-2">
         {#each tags as tag}
           <span class="badge badge-primary">{tag}</span>
         {/each}
-      </div>
-      <div class="justify-center card-actions">
-        <a href={`/posts/${slug}`} class="btn btn-outline btn-primary"
-          >Read &rArr;</a
-        >
       </div>
     </div>
   </div>

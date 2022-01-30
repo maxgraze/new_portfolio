@@ -16,7 +16,7 @@
 >
   <div class="grid grid-flow-col gap-4">
     <a class="link link-hover" href="/projects">Portfolio</a>
-    <a class="link link-hover" href="/posts">Blog</a>
+    <a class="link link-hover" href="/articles">Blog</a>
     <a class="link link-hover" href="/about">About</a>
   </div>
   <div>

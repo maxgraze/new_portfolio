@@ -2,27 +2,27 @@
   import { page } from '$app/stores'
   import Head from '$components/head.svelte'
   import { client } from '$lib/graphql-client'
-  import { postQuery } from '$lib/graphql-queries'
+  import { articleQuery } from '$lib/graphql-queries'
   import { siteMetadataStore } from '$stores/site-metadata'
   import { marked } from 'marked'
 
   export const load = async ({ params }) => {
     const { slug } = params
     const variables = { slug }
-    const { post } = await client.request(postQuery, variables)
+    const { article } = await client.request(articleQuery, variables)
 
     return {
       props: {
-        post,
+        article,
       },
     }
   }
 </script>
 
 <script>
-  export let post
+  export let article
 
-  const { title, date, tags, content, coverImage } = post
+  const { title, date, tags, content, coverImage } = article
   const { siteUrl, name: siteName } = $siteMetadataStore
 </script>
 

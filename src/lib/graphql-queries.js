@@ -47,11 +47,12 @@ export const projectQuery = gql`
 `
 
 const POST_FRAGMENT = gql`
-  fragment PostDetails on Post {
+  fragment PostDetails on Article {
     title
     slug
     date
     content
+    postUrl
     tags
     coverImage {
       url
@@ -59,19 +60,19 @@ const POST_FRAGMENT = gql`
   }
 `
 
-export const postsQuery = gql`
+export const articles = gql`
   ${POST_FRAGMENT}
-  query GetPosts {
-    posts {
+  query GetArticles {
+    articles {
       ...PostDetails
     }
   }
 `
 
-export const postQuery = gql`
+export const articleQuery = gql`
   ${POST_FRAGMENT}
-  query GetPost($slug: String!) {
-    post(where: { slug: $slug }) {
+  query GetArticle {
+    articles {
       ...PostDetails
     }
   }

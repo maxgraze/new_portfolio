@@ -6,9 +6,9 @@ export const get = async () => {
   const {
     body: { siteUrl },
   } = await meatdata()
-  const queryPosts = gql`
-    query Posts {
-      posts {
+  const queryArticles = gql`
+    query Articles {
+      articles {
         title
         slug
       }
@@ -22,15 +22,15 @@ export const get = async () => {
       }
     }
   `
-  const [postsRes, projectsRes] = await Promise.all([
-    client.request(queryPosts),
+  const [articlesRes, projectsRes] = await Promise.all([
+    client.request(queryArticles),
     client.request(queryProjects),
   ])
-  const { posts } = postsRes
+  const { articles } = articlesRes
   const { projects } = projectsRes
 
-  const pages = [`projects`, `posts`, `about`]
-  const body = sitemap(posts, projects, pages, siteUrl)
+  const pages = [`projects`, `articles`, `about`]
+  const body = sitemap(articles, projects, pages, siteUrl)
 
   const headers = {
     'Cache-Control': 'max-age=0, s-maxage=3600',
@@ -43,7 +43,7 @@ export const get = async () => {
 }
 
 const sitemap = (
-  posts,
+  articles,
   projects,
   pages,
   siteUrl
@@ -72,11 +72,11 @@ const sitemap = (
   `
     )
     .join('')}
-  ${posts
+  ${articles
     .map(
-      post => `
+      article => `
   <url>
-    <loc>${siteUrl}/posts/${post.slug}</loc>
+    <loc>${siteUrl}/articles/${article.slug}</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
