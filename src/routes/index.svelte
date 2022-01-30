@@ -7,6 +7,7 @@
     authorsStore,
     siteMetadataStore,
   } from '$stores/site-metadata'
+  import NavBar from '$components/navbar.svelte'
 
   export const load = async () => {
     const [authorRes, projectsRes] = await Promise.all([
@@ -29,6 +30,8 @@
   //   image={openGraphDefaultImage.url}
   // />
   //  url={`${siteUrl}`} <- for Head
+
+  //underline decoration-indigo-500/30
 </script>
 
 <script>
@@ -45,10 +48,11 @@
 </script>
 
 <!-- <h1 class="font-display  text-5xl">Welcome to my Portfolio</h1> -->
-
-{#each authors as { name, intro, picture: { url } }}
-  <div class="flex mb-40 items-end">
-    <div class="mr-6">
+<!-- <NavBar /> -->
+<div class="flex p-44">
+  {#each authors as { name, intro, picture: { url } }}
+    <!-- <div class="flex mb-10 items-end"> -->
+    <div class="mb-40 justify-items-center">
       <h2 class="text-5xl font-display mb-4 font-bold tracking-wider">
         {name}
       </h2>
@@ -56,11 +60,12 @@
     </div>
 
     <img class="mask mask-squircle h-48" src={url} alt={name} />
-  </div>
-{/each}
-
-<div class="grid gap-30 md:grid-cols-4  lg:grid-cols-6 ">
-  {#each projects as { name, slug, description, image }}
-    <ProjectCard {name} {description} url={image[0].url} {slug} />
+    <!-- </div> -->
   {/each}
+
+  <div class="grid gap-30 md:grid-cols-4  lg:grid-cols-6 ">
+    {#each projects as { name, slug, description, image }}
+      <ProjectCard {name} {description} url={image[0].url} {slug} />
+    {/each}
+  </div>
 </div>

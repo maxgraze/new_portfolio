@@ -10,10 +10,13 @@
   // })
 </script>
 
-<div class="pt-10">
-  <Navbar />
-  <main class="container max-w-3xl mx-auto px-4 mb-20">
-    <slot />
-  </main>
-</div>
+<main class="flex flex-col pt-20">
+  <div class="pt-10">
+    <div class="flex flex-1 overflow-hidden">
+      <Navbar />
+      <!-- <main class="container max-w-3xl mx-auto px-4 mb-20"> -->
+      <slot />
+    </div>
+  </div>
+</main>
 <Footer />

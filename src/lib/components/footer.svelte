@@ -3,32 +3,30 @@
     authorsStore,
     socialsStore,
   } from '../../stores/site-metadata'
-  import FacebookIcon from './facebook-icon.svelte'
+  import LinkedinIcon from './linkedin-icon.svelte'
   import TwitterIcon from './twitter-icon.svelte'
-  import YouTubeIcon from './you-tube-icon.svelte'
+  import InstagramIcon from './instagram-icon.svelte'
 
   const { twitterUrl, linkedinUrl, instagramUrl } = $socialsStore
   const { name: AuthorName } = $authorsStore
 </script>
 
-<footer
-  class="p-10 footer bg-primary text-primary-content footer-center"
->
-  <div class="grid grid-flow-col gap-4">
+<footer class="p-8 footer text-body footer-center">
+  <!-- <div class="grid grid-flow-col gap-4">
     <a class="link link-hover" href="/projects">Portfolio</a>
     <a class="link link-hover" href="/articles">Blog</a>
     <a class="link link-hover" href="/about">About</a>
-  </div>
+  </div> -->
   <div>
     <div class="grid grid-flow-col gap-4">
       <a href={twitterUrl}>
         <TwitterIcon />
       </a>
       <a href={instagramUrl}>
-        <YouTubeIcon />
+        <InstagramIcon />
       </a>
       <a href={linkedinUrl}>
-        <FacebookIcon />
+        <LinkedinIcon />
       </a>
     </div>
   </div>
