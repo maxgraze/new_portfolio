@@ -44,14 +44,14 @@
   const { name: authorName } = $authorsStore
 </script>
 
-<h1 class="font-bold text-center mb-20 text-5xl">
-  Welcome to my Portfolio
-</h1>
+<!-- <h1 class="font-display  text-5xl">Welcome to my Portfolio</h1> -->
 
 {#each authors as { name, intro, picture: { url } }}
   <div class="flex mb-40 items-end">
     <div class="mr-6">
-      <h2 class="text-3xl mb-4 font-bold tracking-wider">{name}</h2>
+      <h2 class="text-5xl font-display mb-4 font-bold tracking-wider">
+        {name}
+      </h2>
       <p class="text-xl mb-4">{intro}</p>
     </div>
 
@@ -59,9 +59,7 @@
   </div>
 {/each}
 
-<div
-  class="grid gap-10 md:grid-cols-4 md:px-10 lg:grid-cols-6 lg:-mx-52"
->
+<div class="grid gap-30 md:grid-cols-4  lg:grid-cols-6 ">
   {#each projects as { name, slug, description, image }}
     <ProjectCard {name} {description} url={image[0].url} {slug} />
   {/each}

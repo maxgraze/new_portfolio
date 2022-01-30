@@ -10,8 +10,10 @@
   // })
 </script>
 
-<Navbar />
-<main class="container max-w-3xl mx-auto px-4 mb-20">
-  <slot />
-</main>
+<div class="pt-10">
+  <Navbar />
+  <main class="container max-w-3xl mx-auto px-4 mb-20">
+    <slot />
+  </main>
+</div>
 <Footer />

@@ -1,8 +1,13 @@
-const config = {
+module.exports = {
+  // mode: 'jit',
   content: ['./src/**/*.{html,js,svelte,ts}'],
 
   theme: {
     extend: {
+      fontFamily: {
+        display: ['BellTopo Sans'],
+        body: ['work-sans'],
+      },
       typography: {
         DEFAULT: {
           css: {
@@ -16,4 +21,4 @@ const config = {
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
 }
 
-module.exports = config
+// module.exports = config

@@ -34,18 +34,22 @@
   url={`${siteUrl}${$page.url.pathname}`}
 />
 
-<h1 class="text-4xl mb-10 font-extrabold">articles</h1>
+<h1 class=" font-display text-4xl mb-10 font-extrabold">articles</h1>
 
 {#each articles as { title, slug, postUrl, content, coverImage, tags }}
-  <div class="card shadow-2xl mb-20">
+  <div
+    class="border-solid border-2 border-amber-400 shadow-1xl mb-10 "
+  >
     <figure class="">
-      <img
-        class=""
-        src={coverImage.url}
-        alt={`Cover image for ${title}`}
-      />
+      <a href={postUrl} target="_blank">
+        <img
+          class=""
+          src={coverImage.url}
+          alt={`Cover image for ${title}`}
+        />
+      </a>
     </figure>
-    <div class="card-body prose">
+    <!-- <div class="card-body prose">
       <h2 class="title">{title}</h2>
       {@html marked(content).slice(0, 150)}
 
@@ -53,18 +57,21 @@
         <a
           href={postUrl}
           target="_blank"
-          class="btn btn-outline btn-primary">Read &rArr;</a
-        >
-        <!-- <a
+          class="btn btn-outline btn-primary">Read &rArr;</a -->
+
+    <!-- <a
           href={`/articles/${slug}`}
           class="btn btn-outline btn-primary">Read &rArr;</a
         > -->
-      </div>
-      <div class="flex justify-center mt-5 space-x-2">
-        {#each tags as tag}
-          <span class="badge badge-primary">{tag}</span>
-        {/each}
-      </div>
-    </div>
+    <!-- </div> -->
   </div>
+  <div class="flex justify-center mt-5 space-x-2">
+    {#each tags as tag}
+      <span
+        class="border-solid border-2 border-amber-400 shadow-1xl mb-20 p-1"
+        >{tag}</span
+      >
+    {/each}
+  </div>
+  <!-- </div> -->
 {/each}

@@ -9,18 +9,16 @@
   ]
 </script>
 
-<div
-  class="sidebarbg-neutral text-neutral-content sticky w-64 space-y-6 py-7 px-2"
->
-  <div class="flex-1 px-2 mx-2">
-    <a class="text-lg font-bold" href="/"> Portfolio and Blog </a>
-  </div>
+<div class="sidebar text-neutral-content sticky w-64 py-7 px-10">
+  <a href="/">
+    <img src="./favicon.png" alt="MSG logo" />
+  </a>
 
   <div class="dropdown dropdown-left lg:hidden">
-    <div tabindex="0" class="m-1 btn">Links</div>
+    <!-- <div tabindex="0" class="m-1 btn">Links</div> -->
     <ul
       tabindex="0"
-      class="bg-neutral text-neutral-content p-2 w-52 menu dropdown-content "
+      class=" text-neutral-content p-2 w-52 menu dropdown-content "
     >
       <a class="btn btn-ghost btn-sm rounded-btn" href="/projects">
         Portfolio
@@ -34,7 +32,7 @@
     </ul>
   </div>
 
-  <nav class="sticky top-0 z-50">
+  <nav class="px-2">
     {#each routes as route}
       <a
         href={route.href}

@@ -34,11 +34,11 @@
   url={`${siteUrl}${$page.url.pathname}`}
 />
 
-<h1 class="font-bold mb-20 text-5xl">Extracurricular Projects</h1>
+<h1 class="font-display font-bold mb-20 text-5xl">
+  extracurricular projects
+</h1>
 
-<div
-  class="grid gap-10 md:grid-cols-4 md:px-10 lg:grid-cols-6 lg:-mx-52"
->
+<div class="grid gap-10 md:grid-cols-4 lg:grid-cols-6 ">
   {#each projects as { name, slug, description, image }, index}
     <ProjectCard
       {name}

@@ -10,9 +10,9 @@ const config = {
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
     vite: {
-      // ssr: {
-      //   external: ['whatwg-url'],
-      // },
+      ssr: {
+        external: ['whatwg-url'],
+      },
       resolve: {
         alias: {
           $components: path.resolve('./src/lib/components'),
