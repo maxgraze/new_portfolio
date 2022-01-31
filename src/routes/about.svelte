@@ -41,7 +41,7 @@
   url={`${siteUrl}${$page.url.pathname}`}
 />
 
-<div class="mx-40 px-10 mb-40 mt-10 justify-items-center">
+<div class="md:mx-40 px-10 mb-40 mt-10 justify-items-center">
   <h1 class="font-bold font-display my-10  text-5xl">about</h1>
 
   <div class="flex items-end">
@@ -50,7 +50,11 @@
       <p class="text-xl mb-4">{intro}</p>
     </div>
 
-    <img class="mask mask-squircle h-48" src={url} alt={name} />
+    <img
+      class=" mask mask-squircle md:h-48 h-0"
+      src={url}
+      alt={name}
+    />
   </div>
 
   <article div class="prose prose-lg">

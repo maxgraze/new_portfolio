@@ -10,9 +10,9 @@
   // })
 </script>
 
-<main class="flex flex-col pt-20">
+<main class="flex flex-col md:pt-20">
   <div class="pt-10">
-    <div class="flex flex-1 overflow-hidden">
+    <div class="md:flex md:flex-1 overflow-hidden ">
       <Navbar />
       <!-- <main class="container max-w-3xl mx-auto px-4 mb-20"> -->
       <slot />

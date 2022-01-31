@@ -49,17 +49,23 @@
 
 <!-- <h1 class="font-display  text-5xl">Welcome to my Portfolio</h1> -->
 <!-- <NavBar /> -->
-<div class="flex p-44">
+<div
+  class="md:flex md:space-x-8 md:pr-56 pt-40 md:mr-12 md:pd-0 px-7"
+>
   {#each authors as { name, intro, picture: { url } }}
     <!-- <div class="flex mb-10 items-end"> -->
-    <div class="mb-40 justify-items-center">
+    <div class="md:mb-40 justify-items-center">
       <h2 class="text-5xl font-display mb-4 font-bold tracking-wider">
         {name}
       </h2>
       <p class="text-xl mb-4">{intro}</p>
     </div>
 
-    <img class="mask mask-squircle h-48" src={url} alt={name} />
+    <img
+      class="mx-auto block mask mask-squircle h-48"
+      src={url}
+      alt={name}
+    />
     <!-- </div> -->
   {/each}
 

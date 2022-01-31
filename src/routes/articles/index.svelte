@@ -33,8 +33,10 @@
   image={openGraphDefaultImage.url}
   url={`${siteUrl}${$page.url.pathname}`}
 />
-<div class="inline pt-20 px-32">
-  <h1 class=" font-display text-4xl mb-10 font-extrabold">
+<div class="inline pt-20 md:px-32">
+  <h1
+    class=" ml-7 md:ml-none font-display text-4xl mt-16 mb-10 font-extrabold"
+  >
     articles
   </h1>
 
@@ -70,7 +72,7 @@
     <div class="flex justify-center mt-5 space-x-2">
       {#each tags as tag}
         <span
-          class="border-solid border-2 border-amber-400 shadow-1xl mb-20 p-1"
+          class="border-solid border-2 text-center border-amber-400 shadow-1xl mb-20 p-1"
           >{tag}</span
         >
       {/each}
