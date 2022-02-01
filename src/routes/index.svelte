@@ -49,9 +49,9 @@
 
 <!-- <h1 class="font-display  text-5xl">Welcome to my Portfolio</h1> -->
 <!-- <NavBar /> -->
-<div class="mb-20 text-xl max-w-prose">
+<div class="mb-20 text-xl pl-24 max-w-prose">
   <div
-    class="md:flex md:space-x-8 pt-40 md:mr-12 md:pd-0 px-7 md:px-0"
+    class="md:flex md:space-x-8 pt-36 md:mr-12 md:pd-0 px-7 md:px-0"
   >
     {#each authors as { name, intro, picture: { url } }}
       <!-- <div class="flex mb-10 items-end"> -->

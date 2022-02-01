@@ -3,14 +3,14 @@
   const routes = [
     // { href: '/', name: 'Home' },
     { href: '/about', name: 'about' },
-    { href: '/projects', name: 'projects' },
+    { href: '/projects', name: 'projects/events' },
     { href: '/articles', name: 'articles' },
     // { href: '/newsletter', name: 'newsletter' },
   ]
 </script>
 
 <!-- <div class="sidebar text-neutral-content sticky w-64 py-7 px-10"> -->
-<div class="flex md:flex-col md:w-2/5 text-neutral-content md:px-8">
+<div class="flex md:flex-col md:w-1/5 text-neutral-content md:px-8">
   <a href="/">
     <img class="5 hover:invert" src="./favicon.png" alt="MSG logo" />
   </a>
