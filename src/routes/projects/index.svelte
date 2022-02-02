@@ -35,16 +35,16 @@
   url={`${siteUrl}${$page.url.pathname}`}
 />
 
-<div class="md:inline md:pt-20 md:px-32 mb-40 w-4/5 ">
+<div class="md:inline pt-10 md:px-32 mb-40 w-4/5">
   <h1
     class=" ml-7 md:ml-0 font-display text-4xl mb-10 font-extrabold"
   >
     extracurricular activities
   </h1>
   <!-- <div class="grid gap-10 md:grid-cols-4 lg:grid-cols-6 "> -->
-  <div class="px-7 md:px-0 flex flex-col md:space-y-0 space-y-12">
+  <div class="px-7 md:px-0 flex flex-col md:space-y-0 space-y-12 ">
     {#each projects as { tags, demo, name, slug, description, image }, index}
-      <div class="md:flex space-y-8">
+      <div class="md:flex space-y-8 md:space-y-0 md:mb-20">
         <a href={demo}>
           <ProjectCard {name} url={image[0].url} {index} />
         </a>
@@ -54,7 +54,7 @@
             {@html marked(description)}
           </article>
 
-          <div class=" mt-4 md:mt-auto justify-between ">
+          <div class=" mt-4 justify-between ">
             {#if tags}
               {#each tags as tag}
                 <span

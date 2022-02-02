@@ -49,19 +49,35 @@
 
 <!-- <h1 class="font-display  text-5xl">Welcome to my Portfolio</h1> -->
 <!-- <NavBar /> -->
-<div class="mb-20 text-xl pl-24 max-w-prose">
+<div class="mb-20 text-xl md:pl-24 max-w-prose md:box-content">
   <div
-    class="md:flex md:space-x-8 pt-36 md:mr-12 md:pd-0 px-7 md:px-0"
+    class="md:flex md:space-x-8 pt-12  md:mr-12 md:pd-0 px-7 md:px-0"
   >
     {#each authors as { name, intro, picture: { url } }}
       <!-- <div class="flex mb-10 items-end"> -->
-      <div class="md:mb-40 justify-items-center">
+      <div class=" md:mb-40 justify-items-center inline">
         <h2
-          class="text-5xl font-display mb-4 font-bold tracking-wider"
+          class=" text-4xl md:text-5xl font-display font-bold tracking-wider md:leading-3 leading-4"
         >
           {name}
         </h2>
-        <p class="text-xl mb-4">{intro}</p>
+        <span
+          class="text-blue-700 font-display italic md:tracking-[.58em] tracking-[.28em]"
+          >data designer</span
+        >
+        <br />
+        <br />
+        <p class=" md:text-xl mb-4">
+          I <span class="underline decoration-double">research</span>,
+          I
+          <span class="border-2 border-slate-700 space-x-1"
+            >&nbsp;write&nbsp;</span
+          >, I
+          <span class="underline decoration-wavy ">tinker</span>, and
+          <span class="underline decoration-4"> craft</span>,
+          exploring intuitive ways to represent data. Learn more about
+          what I'm all about, what I've done, and how to get in touch.
+        </p>
       </div>
 
       <img

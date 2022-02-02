@@ -33,9 +33,9 @@
   image={openGraphDefaultImage.url}
   url={`${siteUrl}${$page.url.pathname}`}
 />
-<div class="inline pt-20 md:px-32 mb-40 w-4/5">
+<div class="inline md:px-32 mb-40 w-4/5">
   <h1
-    class=" ml-7 md:ml-none font-display text-4xl mt-16 mb-10 font-extrabold"
+    class=" pt-10 ml-7 md:ml-none font-display text-4xl mb-10 font-extrabold"
   >
     articles
   </h1>

@@ -10,12 +10,18 @@
 </script>
 
 <!-- <div class="sidebar text-neutral-content sticky w-64 py-7 px-10"> -->
-<div class="flex md:flex-col md:w-1/5 text-neutral-content md:px-8">
+<div
+  class="flex md:flex-col md:w-1/5 text-sm md:text-base md:text-neutral-content md:px-8"
+>
   <a href="/">
-    <img class="5 hover:invert" src="./favicon.png" alt="MSG logo" />
+    <img
+      class=" hover:invert md:max-w-md w-44"
+      src="./favicon.png"
+      alt="MSG logo"
+    />
   </a>
 
-  <nav class="flex-row md:width-full md:pl-10 pt-6 md:pt-0">
+  <nav class="flex-row md:width-full md:pl-6 pt-6 md:pt-0">
     {#each routes as route}
       <a
         href={route.href}
@@ -24,7 +30,7 @@
         class:text-cyan-800={route.href === $page.url.pathname}
         >{route.name}</a
       >
-      <span class="md:hidden"> | </span>
+      <span class="md:hidden"> |&nbsp;</span>
     {/each}
     <a
       href="https://buttondown.email/datathesenses"
