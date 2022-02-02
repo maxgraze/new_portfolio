@@ -7,6 +7,8 @@
   import { siteMetadataStore } from '$stores/site-metadata'
   import { marked } from 'marked'
 
+  //                  class="badge badge-primary mr-2 hover:bg-primary-focus cursor-pointer"
+
   export const load = async () => {
     const { projects } = await client.request(projectsQuery)
 
@@ -42,7 +44,9 @@
     extracurricular activities
   </h1>
   <!-- <div class="grid gap-10 md:grid-cols-4 lg:grid-cols-6 "> -->
-  <div class="px-7 md:px-0 flex flex-col md:space-y-0 space-y-12 ">
+  <div
+    class="px-7 md:px-0 flex flex-col md:space-y-0 space-y-12 ml-12 md:ml-0"
+  >
     {#each projects as { tags, demo, name, slug, description, image }, index}
       <div class="md:flex space-y-8 md:space-y-0 md:mb-20">
         <a href={demo}>
@@ -53,12 +57,13 @@
           <article class="prose prose-l">
             {@html marked(description)}
           </article>
-
-          <div class=" mt-4 justify-between ">
+          <div
+            class="align-middle md:align-baseline relative md:inherit text-center	mt-5 space-x-2 md:inherit md:flex md:justify-center"
+          >
             {#if tags}
               {#each tags as tag}
                 <span
-                  class="badge badge-primary mr-2 hover:bg-primary-focus cursor-pointer"
+                  class="mt-2 md:mt-0 inline-block border-solid border-2 text-center border-amber-400 shadow-1xl md:mb-20 p-1"
                   >{tag}</span
                 >
               {/each}

@@ -65,6 +65,8 @@ footer {
   max-width: 24rem;
 } */
 
-.ea {
-  max-width: 24rem;
+.link {
+  text-decoration-color: #00838f;
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 1.5px;
 }
