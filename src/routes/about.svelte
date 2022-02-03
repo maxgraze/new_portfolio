@@ -20,12 +20,7 @@
 <script>
   export let authors
 
-  const {
-    name,
-    intro,
-    bio,
-    picture: { url },
-  } = authors[0]
+  const { name, intro, bio } = authors[0]
 
   const {
     siteUrl,
@@ -41,20 +36,14 @@
   url={`${siteUrl}${$page.url.pathname}`}
 />
 
-<div class="md:mx-40 px-10 mb-40 mt-10 justify-items-center">
+<div class="md:mx-40 px-10 mb-40 justify-items-center">
   <h1 class="font-bold font-display my-10  text-5xl">about</h1>
 
   <div class="flex items-end">
     <div class="mr-6">
       <h2 class="text-3xl mb-4 font-bold tracking-wider">{name}</h2>
-      <p class="text-xl mb-4">{intro}</p>
+      <!-- <p class="text-xl mb-4">{intro}</p> -->
     </div>
-
-    <img
-      class=" mask mask-squircle md:h-48 h-0"
-      src={url}
-      alt={name}
-    />
   </div>
 
   <article div class="prose prose-lg">

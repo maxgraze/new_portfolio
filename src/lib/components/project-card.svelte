@@ -8,7 +8,9 @@
 <div
   class="relative group card rounded-sm col-span-2 border-solid border-2 border-amber-400 "
 >
-  <img src={url} alt={name} class="object-cover h-full max-w-sm" />
+  {#if url}
+    <img src={url} alt={name} class="object-cover h-full max-w-sm" />
+  {/if}
   {#if description}
     <a href={`/projects`}>
       <div

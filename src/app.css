@@ -65,8 +65,35 @@ footer {
   max-width: 24rem;
 } */
 
-.link {
+/* .link {
   text-decoration-color: #00838f;
   text-decoration-thickness: 0.125em;
   text-underline-offset: 1.5px;
+} */
+
+:root {
+  --cyan: #00838f;
+  --gold: #fbbf24;
+}
+
+.link {
+  color: #333;
+  text-decoration: none;
+  background: -webkit-linear-gradient(
+    transparent 90%,
+    var(--gold) 10%
+  );
+  background: -moz-linear-gradient(transparent 90%, var(--gold) 10%);
+  background: linear-gradient(transparent 90%, var(--gold) 10%);
+  -webkit-box-shadow: inset 0 0 0 0 var(--gold);
+  box-shadow: inset 0 0 0 0 var(--gold);
+  -webkit-transition: box-shadow ease 1s;
+  -moz-transition: box-shadow ease 1s;
+  transition: box-shadow ease 1s;
+  color: var(--cyan);
+}
+.link:hover {
+  color: #fff;
+  -webkit-box-shadow: inset 0 -100px 0 0 var(--gold);
+  box-shadow: inset 0 -100px 0 0 var(--gold);
 }
