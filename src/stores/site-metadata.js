@@ -16,7 +16,7 @@ const fetchSocials = async () => {
   return socials[0]
 }
 
-socialsStore.set(await fetchSocials())
+fetchSocials().then(output => socialsStore.set(output))
 
 const fetchAuthors = async () => {
   const { authors } = await client.request(authorsQuery)
@@ -24,7 +24,7 @@ const fetchAuthors = async () => {
   return authors[0]
 }
 
-authorsStore.set(await fetchAuthors())
+fetchAuthors().then(output => authorsStore.set(output))
 
 const fetchSiteMetadata = async () => {
   const { projectMetadatas } = await client.request(siteMetadataQuery)
@@ -32,4 +32,4 @@ const fetchSiteMetadata = async () => {
   return projectMetadatas[0]
 }
 
-siteMetadataStore.set(await fetchSiteMetadata())
+fetchSiteMetadata().then(output => siteMetadataStore.set(output))

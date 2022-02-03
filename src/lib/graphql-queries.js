@@ -31,7 +31,7 @@ const PROJECT_FRAGMENT = gql`
 export const projectsQuery = gql`
   ${PROJECT_FRAGMENT}
   query GetProjects {
-    projects {
+    projects(orderBy: createdAt_DESC) {
       ...ProjectDetails
     }
   }
