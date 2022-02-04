@@ -24,11 +24,6 @@
       },
     }
   }
-  //   <Head
-  //   title={`${siteName} · ${authorName}`}
-  //   {description}
-  //   image={openGraphDefaultImage.url}
-  // />
   //  url={`${siteUrl}`} <- for Head
 
   //underline decoration-indigo-500/30
@@ -37,9 +32,7 @@
 <script>
   export let projects
   export let authors
-</script>
 
-<!-- <script>
   const {
     siteUrl,
     name: siteName,
@@ -47,7 +40,13 @@
     openGraphDefaultImage,
   } = $siteMetadataStore
   const { name: authorName } = $authorsStore
-</script> -->
+</script>
+
+<Head
+  title={`${siteName} · ${authorName}`}
+  {description}
+  image={openGraphDefaultImage.url}
+/>
 
 <!-- <h1 class="font-display  text-5xl">Welcome to my Portfolio</h1> -->
 <!-- <NavBar /> -->

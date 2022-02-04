@@ -37,7 +37,5 @@
     "theme-change": "^2.0.2"
   },
   "type": "module",
-  "dependencies": {
-    "next-absolute-url": "^1.2.2"
-  }
+  "dependencies": {}
 }
