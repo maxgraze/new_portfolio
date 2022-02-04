@@ -19,4 +19,4 @@
     </div>
   </div>
 </main>
-<!-- <Footer /> -->
+<Footer />
