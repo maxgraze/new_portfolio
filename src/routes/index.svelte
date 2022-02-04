@@ -1,12 +1,12 @@
 <script context="module">
-  // import Head from '$components/head.svelte'
+  import Head from '$components/head.svelte'
   import ProjectCard from '$components/project-card.svelte'
   import { client } from '$lib/graphql-client'
   import { authorsQuery, projectsQuery } from '$lib/graphql-queries'
-  // import {
-  //   authorsStore,
-  //   siteMetadataStore,
-  // } from '$stores/site-metadata'
+  import {
+    authorsStore,
+    siteMetadataStore,
+  } from '$stores/site-metadata'
   import NavBar from '$components/navbar.svelte'
 
   export const load = async () => {
