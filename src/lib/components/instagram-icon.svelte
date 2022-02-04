@@ -1,3 +1,8 @@
+<script>
+  //https://icons8.com/icon/5eT5OnLluNOx/instagram
+  //https://icons8.com/icon/set/social-media/plasticine
+</script>
+
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="25"

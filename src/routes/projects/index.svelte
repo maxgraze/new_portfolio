@@ -4,7 +4,7 @@
   import ProjectCard from '$components/project-card.svelte'
   import { client } from '$lib/graphql-client'
   import { projectsQuery } from '$lib/graphql-queries'
-  import { siteMetadataStore } from '$stores/site-metadata'
+  // import { siteMetadataStore } from '$stores/site-metadata'
   import { marked } from 'marked'
 
   //                  class="badge badge-primary mr-2 hover:bg-primary-focus cursor-pointer"
@@ -22,6 +22,9 @@
 
 <script>
   export let projects
+</script>
+
+<!-- <script>
 
   const {
     siteUrl,
@@ -35,7 +38,7 @@
   description={`A list of recent projects.`}
   image={openGraphDefaultImage.url}
   url={`${siteUrl}${$page.url.pathname}`}
-/>
+/> -->
 
 <div class="md:inline pt-10 md:px-32 mb-40 w-4/5">
   <h1

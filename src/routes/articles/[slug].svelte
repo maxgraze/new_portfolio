@@ -3,7 +3,7 @@
   import Head from '$components/head.svelte'
   import { client } from '$lib/graphql-client'
   import { articleQuery } from '$lib/graphql-queries'
-  import { siteMetadataStore } from '$stores/site-metadata'
+  // import { siteMetadataStore } from '$stores/site-metadata'
   import { marked } from 'marked'
 
   export const load = async ({ params }) => {
@@ -23,6 +23,9 @@
   export let article
 
   const { title, date, tags, content, coverImage } = article
+</script>
+
+<!-- <script>
   const { siteUrl, name: siteName } = $siteMetadataStore
 </script>
 
@@ -31,7 +34,7 @@
   description={content.slice(0, 120)}
   image={coverImage.url}
   url={`${siteUrl}${$page.url.pathname}`}
-/>
+/> -->
 
 <div class="sm:-mx-5 md:-mx-10 lg:-mx-20 xl:-mx-38 mb-5">
   <img
