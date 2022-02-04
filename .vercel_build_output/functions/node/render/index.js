@@ -24314,7 +24314,7 @@ var manifest = {
   assets: new Set([".DS_Store", "favicon.png", "fonts/.DS_Store", "fonts/BellTopoSansBold.woff", "fonts/BellTopoSansBold.woff2", "fonts/BellTopoSansBoldItalic.woff", "fonts/BellTopoSansBoldItalic.woff2", "fonts/BellTopoSansItalic.woff", "fonts/BellTopoSansItalic.woff2", "fonts/BellTopoSansRegular.woff", "fonts/BellTopoSansRegular.woff2", "robots.txt"]),
   _: {
     mime: { ".png": "image/png", ".woff": "font/woff", ".woff2": "font/woff2", ".txt": "text/plain" },
-    entry: { "file": "start-747579e2.js", "js": ["start-747579e2.js", "chunks/vendor-de77e6d6.js"], "css": [] },
+    entry: { "file": "start-5889e321.js", "js": ["start-5889e321.js", "chunks/vendor-de77e6d6.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
