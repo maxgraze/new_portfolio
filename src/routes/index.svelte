@@ -1,12 +1,12 @@
 <script context="module">
-  import Head from '$components/head.svelte'
+  // import Head from '$components/head.svelte'
   import ProjectCard from '$components/project-card.svelte'
   import { client } from '$lib/graphql-client'
   import { authorsQuery, projectsQuery } from '$lib/graphql-queries'
-  import {
-    authorsStore,
-    siteMetadataStore,
-  } from '$stores/site-metadata'
+  // import {
+  //   authorsStore,
+  //   siteMetadataStore,
+  // } from '$stores/site-metadata'
   import NavBar from '$components/navbar.svelte'
 
   export const load = async () => {
@@ -37,7 +37,9 @@
 <script>
   export let projects
   export let authors
+</script>
 
+<!-- <script>
   const {
     siteUrl,
     name: siteName,
@@ -45,7 +47,7 @@
     openGraphDefaultImage,
   } = $siteMetadataStore
   const { name: authorName } = $authorsStore
-</script>
+</script> -->
 
 <!-- <h1 class="font-display  text-5xl">Welcome to my Portfolio</h1> -->
 <!-- <NavBar /> -->

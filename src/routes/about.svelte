@@ -3,7 +3,7 @@
   import Head from '$components/head.svelte'
   import { client } from '$lib/graphql-client'
   import { authorsQuery } from '$lib/graphql-queries'
-  import { siteMetadataStore } from '$stores/site-metadata'
+  // import { siteMetadataStore } from '$stores/site-metadata'
   import { marked } from 'marked'
 
   export const load = async () => {
@@ -21,7 +21,9 @@
   export let authors
 
   const { name, intro, bio } = authors[0]
+</script>
 
+<!-- <script>
   const {
     siteUrl,
     name: siteName,
@@ -34,7 +36,7 @@
   description={bio.slice(0, 120)}
   image={openGraphDefaultImage.url}
   url={`${siteUrl}${$page.url.pathname}`}
-/>
+/> -->
 
 <div class="md:mx-40 px-10 mb-40 justify-items-center">
   <h1 class="font-bold font-display my-10  text-5xl">about</h1>
