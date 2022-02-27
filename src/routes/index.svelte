@@ -6,8 +6,12 @@
   import {
     authorsStore,
     siteMetadataStore,
+    fetchAuthors,
+    fetchSiteMetadata,
   } from '$stores/site-metadata'
-  import NavBar from '$components/navbar.svelte'
+
+  fetchAuthors()
+  fetchSiteMetadata()
 
   export const load = async () => {
     const [authorRes, projectsRes] = await Promise.all([

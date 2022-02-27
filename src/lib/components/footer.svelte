@@ -1,12 +1,19 @@
-<script>
+<script context="module">
   import {
     authorsStore,
+    fetchAuthors,
+    fetchSocials,
     socialsStore,
   } from '../../stores/site-metadata'
   import LinkedinIcon from './linkedin-icon.svelte'
   import TwitterIcon from './twitter-icon.svelte'
   import InstagramIcon from './instagram-icon.svelte'
 
+  fetchAuthors()
+  fetchSocials()
+</script>
+
+<script>
   const { twitterUrl, linkedinUrl, instagramUrl } = $socialsStore
   const { name: AuthorName } = $authorsStore
 </script>

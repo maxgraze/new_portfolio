@@ -1,5 +1,7 @@
 <script>
   import { page } from '$app/stores'
+  import { onMount } from 'svelte'
+
   const routes = [
     // { href: '/', name: 'Home' },
     { href: '/about', name: 'about' },
@@ -7,6 +9,11 @@
     { href: '/articles', name: 'articles' },
     // { href: '/newsletter', name: 'newsletter' },
   ]
+
+  let pathname
+  onMount(async () => {
+    pathname = $page.url.pathname
+  })
 </script>
 
 <!-- <div class="sidebar text-neutral-content sticky w-64 py-7 px-10"> -->
@@ -26,9 +33,8 @@
       <a
         href={route.href}
         class="transition duration-300 md:block hover:underline decoration-pink-900 decoration-wavy hover:text-cyan-800 text-pink-900"
-        class:text-pink-900={route.href !== $page.url.pathname}
-        class:text-cyan-800={route.href === $page.url.pathname}
-        >{route.name}</a
+        class:text-pink-900={route.href !== pathname}
+        class:text-cyan-800={route.href === pathname}>{route.name}</a
       >
       <span class="md:hidden"> |&nbsp;</span>
     {/each}

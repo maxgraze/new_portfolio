@@ -3,12 +3,10 @@
     authorsStore,
     siteMetadataStore,
   } from '../../stores/site-metadata'
-
   export let title // page title
   export let description // page description
   export let image // page image
   export let url // page url
-
   const { siteUrl } = $siteMetadataStore
   const { name } = $authorsStore
 </script>

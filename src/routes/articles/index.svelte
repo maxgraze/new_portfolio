@@ -3,8 +3,13 @@
   import Head from '$components/head.svelte'
   import { client } from '$lib/graphql-client'
   import { articleQuery } from '$lib/graphql-queries'
-  import { siteMetadataStore } from '$stores/site-metadata'
+  import {
+    fetchSiteMetadata,
+    siteMetadataStore,
+  } from '$stores/site-metadata'
   import { marked } from 'marked'
+  import { onMount } from 'svelte'
+  fetchSiteMetadata()
 
   export const load = async () => {
     const { articles } = await client.request(articleQuery)
@@ -19,6 +24,12 @@
 
 <script>
   export let articles
+
+  let pathname
+  onMount(async () => {
+    pathname = $page.url.pathname
+  })
+
   const {
     siteUrl,
     name: siteName,
@@ -30,7 +41,7 @@
   title={`articles! · ${siteName}`}
   description={`A list of recent articles.`}
   image={openGraphDefaultImage.url}
-  url={`${siteUrl}${$page.url.pathname}`}
+  url={`${siteUrl}${$pathname}`}
 />
 <div class="inline md:px-32 mb-40 w-4/5">
   <h1

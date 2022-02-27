@@ -4,8 +4,13 @@
   import ProjectCard from '$components/project-card.svelte'
   import { client } from '$lib/graphql-client'
   import { projectsQuery } from '$lib/graphql-queries'
-  import { siteMetadataStore } from '$stores/site-metadata'
+  import {
+    fetchSiteMetadata,
+    siteMetadataStore,
+  } from '$stores/site-metadata'
+  import { onMount } from 'svelte'
   import { marked } from 'marked'
+  fetchSiteMetadata()
 
   //                  class="badge badge-primary mr-2 hover:bg-primary-focus cursor-pointer"
 
@@ -22,6 +27,11 @@
 
 <script>
   export let projects
+  let pathname
+  onMount(async () => {
+    pathname = $page.url.pathname
+  })
+
   const {
     siteUrl,
     name: siteName,
@@ -30,10 +40,10 @@
 </script>
 
 <Head
-  title={`Projects · ${siteName}`}
-  description={`A list of recent projects.`}
+  title={`Blog posts! · ${siteName}`}
+  description={`A list of recent blog posts.`}
   image={openGraphDefaultImage.url}
-  url={`${siteUrl}${$page.url.pathname}`}
+  url={`${siteUrl}${pathname}`}
 />
 
 <div class="md:inline pt-10 md:px-32 mb-40 w-4/5">

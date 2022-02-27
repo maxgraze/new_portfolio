@@ -3,11 +3,15 @@
   import Navbar from '$components/navbar.svelte'
   import { onMount } from 'svelte'
   // import { themeChange } from 'theme-change'
-  import '../app.css'
+  import {
+    fetchAuthors,
+    fetchSiteMetadata,
+    fetchSocials,
+  } from '$stores/site-metadata'
 
-  // onMount(async () => {
-  //   themeChange(false)
-  // })
+  fetchSiteMetadata()
+  fetchSocials()
+  fetchAuthors()
 </script>
 
 <main class="flex flex-col md:pt-20">
