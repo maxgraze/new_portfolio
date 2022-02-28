@@ -43,9 +43,9 @@
     extracurricular activities
   </h1>
   <!-- <div class="grid gap-10 md:grid-cols-4 lg:grid-cols-6 "> -->
-  <div class="px-7 md:px-0 flex flex-col space-y-12 ml-12 md:ml-0">
+  <div class="pb-7 md:px-0 flex flex-col space-y-12 ml-12 md:ml-0">
     {#each projects as { tags, demo, name, slug, description, image }, index}
-      <div class="md:flex space-y-8 md:space-y-0 md:mb-20">
+      <div class="md:flex space-y-8 md:space-y-0">
         {#if image}
           <a href={demo}>
             <ProjectCard {name} url={image[0].url} {index} />
