@@ -12,7 +12,7 @@
     <img src={url} alt={name} class="object-cover h-full max-w-sm" />
   {/if}
   {#if description}
-    <a href={`/projects`}>
+    <a href={`/projects/#${slug}`}>
       <div
         class="absolute bottom-0 left-0 right-0 lg:opacity-0 group-hover:opacity-90 bg-white p-4 duration-300 text-body"
       >

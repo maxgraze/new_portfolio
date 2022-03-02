@@ -51,7 +51,7 @@
             <ProjectCard {name} url={image[0].url} {index} />
           </a>
         {/if}
-        <div class="md:flex md:flex-col md:pl-6">
+        <div id={slug} class="md:flex md:flex-col md:pl-6">
           <h1 class="text-2xl font-semibold mb-5">{name}</h1>
           <article class="prose prose-l">
             {@html marked(description)}
