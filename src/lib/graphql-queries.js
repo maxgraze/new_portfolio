@@ -84,6 +84,7 @@ export const socialsQuery = gql`
       twitterUrl
       instagramUrl
       linkedinUrl
+      observableUrl
     }
   }
 `

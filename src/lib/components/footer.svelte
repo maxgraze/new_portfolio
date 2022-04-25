@@ -6,8 +6,10 @@
   import LinkedinIcon from './linkedin-icon.svelte'
   import TwitterIcon from './twitter-icon.svelte'
   import InstagramIcon from './instagram-icon.svelte'
+  import ObservableIcon from './observable.svelte'
 
-  const { twitterUrl, linkedinUrl, instagramUrl } = $socialsStore
+  const { twitterUrl, linkedinUrl, instagramUrl, observableUrl } =
+    $socialsStore
   const { name: AuthorName } = $authorsStore
 </script>
 
@@ -27,6 +29,9 @@
       </a>
       <a href={linkedinUrl}>
         <LinkedinIcon />
+      </a>
+      <a href={observableUrl}>
+        <ObservableIcon />
       </a>
     </div>
   </div>
